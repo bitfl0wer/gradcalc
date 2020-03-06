@@ -1,0 +1,52 @@
+.headlist {
+    padding: 18px;
+}
+
+body {
+    background: #EFF7FF;
+    padding: 0;
+    margin: 0;
+    font-family: OpenSans, sans-serif;
+}
+
+.navbar {
+    background: #D9ECFF;
+    padding: 0;
+    width: "100%";
+}
+
+#headtext, .headcontainer {
+    align-self: center;
+}
+
+.headcontainer {
+    width: 60vw;
+    background-color: #D9ECFF;
+    padding: 35px;
+    padding-left: 55px;
+    padding-right: 55px;
+    border-radius: 25px;
+    margin-top: 100px;
+}
+
+#headtext {
+    color: #000000;
+    font-size: 22px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*Media Queries für responsives Design*/
+
+@media only screen and (max-width: 700px) {
+    .headcontainer {
+        width: 84vw;
+        margin-top: 60px;
+    }
+
+    #headtext {
+        font-size: 15px;
+    }
+}
