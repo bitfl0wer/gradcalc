@@ -135,6 +135,6 @@ table, th, td {
         -moz-appearance: textfield;
     } 
     th {
-        padding: 0px;
+        padding: 5px;
     }
 }
