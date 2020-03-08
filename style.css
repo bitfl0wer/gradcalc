@@ -93,4 +93,13 @@ td {
     #headtext {
         font-size: 15px;
     }
+
+    table * {
+        font-size: 12px;
+    }
+
+    #mid {
+        width: 480px;
+    }
+
 }
