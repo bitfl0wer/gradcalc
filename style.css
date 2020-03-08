@@ -60,6 +60,15 @@ input[type=number]{
     -moz-appearance: textfield;
 } 
 
+input[type=radio]{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    text-align: center;
+}
+
 .resizable {
     font-size: 1vw;
 }
@@ -70,6 +79,15 @@ td {
     padding-top: 2px;
     padding-bottom: 2px;
 }
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  th {
+      background: #D9ECFF;
+      padding: 10px;
+  }
 
 /*Media Queries für responsives Design*/
 
@@ -101,13 +119,11 @@ td {
     #mid {
         width: 480px;
     }
-
 }
 
 @media only screen and (max-width: 400px) {
     table * {
         font-size: 10px;
-        font-weight: 1000;
     }
 
     #mid {
@@ -118,4 +134,7 @@ td {
         width: 28px;
         -moz-appearance: textfield;
     } 
+    th {
+        padding: 0px;
+    }
 }
