@@ -38,8 +38,16 @@ body {
     font-weight: bold;
 }
 
-#calculator {
+.calculator {
     margin-top: 70px;
+}
+
+#mid {
+    margin-top: 60px;
+}
+
+#tables-2 {
+    margin-top: 50px;
 }
 
 /*Media Queries für responsives Design*/
