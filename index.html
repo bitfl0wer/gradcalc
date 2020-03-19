@@ -32,7 +32,7 @@
     
 
     <div class="container input-group input-group-md" id="mid">
-      <table>
+     <table>
         <tr>
           <th>Fächer, in denen du deine Abiturprüfungen schreibst</td>
           <th class="innumber">1.Hj</td>
@@ -218,6 +218,7 @@
 
       function ausrechnen() {
 
+        //Skript errchnet die Summe aller Halbjahresnoten der schriftlichen Abiturfächer
         var p1hj1 = parseInt(document.getElementsByName("fach1hj1")[0].value);
         var p1hj2 = parseInt(document.getElementsByName("fach1hj2")[0].value);
         var p1hj3 = parseInt(document.getElementsByName("fach1hj3")[0].value);
@@ -233,13 +234,14 @@
         var p3hj3 = parseInt(document.getElementsByName("fach3hj3")[0].value);
         var p3hj4 = parseInt(document.getElementsByName("fach3hj4")[0].value);
         var p3 = p3hj1 + p3hj2 + p3hj3 + p3hj4;
+        var summea = p1 + p2 + p3
+
+        //Skript addiert die Halbjahresnoten der restlichen Fächer
         var p4hj1 = parseInt(document.getElementsByName("fach4hj1")[0].value);
         var p4hj2 = parseInt(document.getElementsByName("fach4hj2")[0].value);
         var p4hj3 = parseInt(document.getElementsByName("fach4hj3")[0].value);
         var p4hj4 = parseInt(document.getElementsByName("fach4hj4")[0].value);
         var p4 = p4hj1 + p4hj2 + p4hj3 + p4hj4;
-        var summea = p1 + p2 + p3
-
         var a1hj1 = parseInt(document.getElementsByName("fach5hj1")[0].value);
         var a1hj2 = parseInt(document.getElementsByName("fach5hj2")[0].value);
         var a1hj3 = parseInt(document.getElementsByName("fach5hj3")[0].value);
@@ -275,20 +277,22 @@
         var a7hj3 = parseInt(document.getElementsByName("fach11hj3")[0].value);
         var a7hj4 = parseInt(document.getElementsByName("fach11hj4")[0].value);
         var a7 = a7hj1 + a7hj2 + a7hj3 + a7hj4;
-
         var summeb = p4 + a1 + a2+ a3 + a4 + a5 + a6 + a7
+
+        //Skript die Punkte, die in der Qualifikationsphase erreicht werden
         var punkte = ((summea*2 + summeb)/54)*40
 
+        //Skript addiert die Punkte, die im Abitur erreicht wurden
         var pf1 = parseInt(document.getElementsByName("pff1n")[0].value);
         var pf2 = parseInt(document.getElementsByName("pff2n")[0].value);
         var pf3 = parseInt(document.getElementsByName("pff3n")[0].value);
         var pf4 = parseInt(document.getElementsByName("pff4n")[0].value);
         var abipunkte = pf1 + pf2 + pf3 + pf4
 
+        //Skript addiert die Punkte der Qualifikationsphase mit den Punkten aus den Abiturprüfungen
         var gesamtpunkte = punkte + abipunkte*5
         gesamtpunkte = Math.floor(gesamtpunkte);
         document.getElementById("gesamtpunkte").innerHTML = gesamtpunkte;
-
 
         //Skript zum Zusammenfassen aller Halbjahresnoten in einem Array
         var alle = [];
@@ -302,19 +306,114 @@
           }
         }
         //document.getElementById("testfeld").innerHTML = alle;
+        var copyAlle = alle;
+        var streichnote = Math.min.apply(null, copyAlle);
         //Ende dieses Skriptes
-
+        //Berechnen der 2 kleinsten Noten und setzen der entsprechenden Felder
+        res = copyAlle.sort((a,b) => a - b).slice(0, 2);
+        document.getElementById("streich1").innerHTML = res[0];
+        document.getElementById("streich2").innerHTML = res[1];
         var abiturnote;
-        switch (gesamtpunkte) {
-          case 300:
-            abiturnote = 4.0;
-          case 301:
-            abiturnote = 3.9;
-          case 319:
-            abiturnote = 3.8;
-          default:
-            return;
+        if (gesamtpunkte < 300){
+          abiturnote = "Du hast dein Abitur leider nicht bestanden.";
+          }
+        if (gesamtpunkte >= 300){
+          abiturnote = 4.0;
+          }
+        if (gesamtpunkte >= 301){
+          abiturnote = 3.9;
+          }
+        if (gesamtpunkte >= 319){
+          abiturnote = 3.8;
+          }
+        if (gesamtpunkte >= 337){
+          abiturnote = 3.7;
+          }
+        if (gesamtpunkte >= 355){
+          abiturnote = 3.6;
+          }
+        if (gesamtpunkte >= 373){
+          abiturnote = 3.5;
+          }
+        if (gesamtpunkte >= 391){
+          abiturnote = 3.4;
+          }
+        if (gesamtpunkte >= 409){
+         abiturnote = 3.3;
+         }
+        if (gesamtpunkte >= 427){
+          abiturnote = 3.2;
+          }
+        if (gesamtpunkte >= 445){
+          abiturnote = 3.1;
+          }
+        if (gesamtpunkte >= 463){
+          abiturnote = 3.0;
+          }
+        if (gesamtpunkte >= 481){
+          abiturnote = 2.9;
+          }
+        if (gesamtpunkte >= 499){
+          abiturnote = 2.8;
+          }
+        if (gesamtpunkte >= 517){
+          abiturnote = 2.7;
+          }
+        if (gesamtpunkte >= 535){
+          abiturnote = 2.6;
+          }
+        if (gesamtpunkte >= 553){
+          abiturnote = 2.5;
+          }
+        if (gesamtpunkte >= 571){
+          abiturnote = 2.4;
+          }
+        if (gesamtpunkte >= 589){
+          abiturnote = 2.3;
+          }
+        if (gesamtpunkte >= 607){
+          abiturnote = 2.2;
+          }
+        if (gesamtpunkte >= 625){
+          abiturnote = 2.1;
+          }
+        if (gesamtpunkte >= 643){
+          abiturnote = 2.0;
+          }
+        if (gesamtpunkte >= 661){
+          abiturnote = 1.9;
+          }
+        if (gesamtpunkte >= 679){
+          abiturnote = 1.8;
+          }
+        if (gesamtpunkte >= 697){
+          abiturnote = 1.7;
+          }
+        if (gesamtpunkte >= 715){
+          abiturnote = 1.6;
+          }
+        if (gesamtpunkte >= 733){
+          abiturnote = 1.5;
+          }
+        if (gesamtpunkte >= 751){
+          abiturnote = 1.4;
+          }
+        if (gesamtpunkte >= 769){
+          abiturnote = 1.3;
+          }
+        if (gesamtpunkte >= 787){
+          abiturnote = 1.2;
+          }
+        if (gesamtpunkte >= 805){
+          abiturnote = 1.1;
+          }
+        if (gesamtpunkte >= 823) {
+          abiturnote = 1.0;
+          }
+        if (abiturnote === undefined) {
+          abiturnote = "Irgendwas ist falsch gelaufen.";
         }
+        document.getElementById("abinote").innerHTML = abiturnote;
       }
 
     </script>
