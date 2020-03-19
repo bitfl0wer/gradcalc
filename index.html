@@ -27,8 +27,51 @@
             und dir somit <span class="bold">mehr Klarheit</span> über deinen
             schulischen Stand verschaffen!</p>
     </div>
+    
 
     <div class="container input-group input-group-md" id="mid">
+      <table>
+        <tr>
+          <th>Fächer, in denen du deine Abiturprüfungen schreibst</td>
+          <th class="innumber">1.Hj</td>
+          <th class="innumber">2.Hj</td>
+          <th class="innumber">3.Hj</td>
+          <th class="innumber">4.Hj</td>
+          </tr>
+          <tr>
+            <td><input onblur="setInput('fach1', 'pff1')" type="text" name="fach1" id="fach1" placeholder="Leistungskursfach eingeben..."></td>
+           
+            <td class="innumber"><input type="number" name="fach1hj1" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach1hj2" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach1hj3" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach1hj4" min="0" max=15></td>
+          </tr>
+          <tr>
+            <td><input onblur="setInput('fach2', 'pff2')" type="text" name="fach2" id="fach2" placeholder="Leistungskursfach eingeben..."></td>
+           
+            <td class="innumber"><input type="number" name="fach2hj1" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach2hj2" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach2hj3" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach2hj4" min="0" max=15></td>
+          </tr>
+          <tr>
+            <td><input onblur="setInput('fach3', 'pff3')" type="text" name="fach3" id="fach3" placeholder="Leistungskursfach eingeben..."></td>
+            
+            <td class="innumber"><input type="number" name="fach3hj1" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach3hj2" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach3hj3" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach3hj4" min="0" max=15></td>
+          </tr>
+          <tr>
+            <td><input onblur="setInput('fach4', 'pff4')" type="text" name="fach4" id="fach4" placeholder="Grundkursfach eingeben..."></td>
+            
+            <td class="innumber"><input type="number" name="fach4hj1" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach4hj2" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach4hj3" min="0" max=15></td>
+            <td class="innumber"><input type="number" name="fach4hj4" min="0" max=15></td>
+          </tr>
+      </table>
+
     <table>
         <tr>
           <th>Fächer</td>
@@ -39,42 +82,7 @@
           <th class="innumber">3.Hj</td>
           <th class="innumber">4.Hj</td>
        </tr>
-       <tr>
-         <td><input type="text" name="fach1" id="fach1" placeholder="Fach eingeben..."></td>
-         <td><input type="radio" name="fach1lkgk" value="fach1lk"></td>
-         <td><input type="radio" name="fach1lkgk" value="fach1gk"></td>
-         <td class="innumber"><input type="number" name="fach1hj1" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach1hj2" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach1hj3" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach1hj4" min="0" max=15></td>
-       </tr>
-       <tr>
-         <td><input type="text" name="fach2" id="fach2" placeholder="Fach eingeben..."></td>
-         <td><input type="radio" name="fach2lkgk" value="fach2lk"></td>
-         <td><input type="radio" name="fach2lkgk" value="fach2gk"></td>
-         <td class="innumber"><input type="number" name="fach2hj1" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach2hj2" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach2hj3" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach2hj4" min="0" max=15></td>
-       </tr>
-       <tr>
-         <td><input type="text" name="fach3" id="fach3" placeholder="Fach eingeben..."></td>
-         <td><input type="radio" name="fach3lkgk" value="fach3lk"></td>
-         <td><input type="radio" name="fach3lkgk" value="fach3gk"></td>
-         <td class="innumber"><input type="number" name="fach3hj1" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach3hj2" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach3hj3" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach3hj4" min="0" max=15></td>
-       </tr>
-       <tr>
-         <td><input type="text" name="fach4" id="fach4" placeholder="Fach eingeben..."></td>
-         <td><input type="radio" name="fach4lkgk" value="fach4lk"></td>
-         <td><input type="radio" name="fach4lkgk" value="fach4gk"></td>
-         <td class="innumber"><input type="number" name="fach4hj1" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach4hj2" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach4hj3" min="0" max=15></td>
-         <td class="innumber"><input type="number" name="fach4hj4" min="0" max=15></td>
-       </tr>
+       
        <tr>
          <td><input type="text" name="fach5" id="fach5" placeholder="Fach eingeben..."></td>
          <td><input type="radio" name="fach5lkgk" value="fach5lk"></td>
@@ -139,6 +147,7 @@
          <td class="innumber"><input type="number" name="fach11hj4" min="0" max=15></td>
        </tr>
      </table>
+     <button class="btn btn-primary" onClick="ausrechnen()">Hallo</button>
     </div>
     <div class="container calculator">
      <div class="row" id="tables-2">
@@ -148,6 +157,25 @@
          <td>Abiturprüfungsfächer</td>
          <td>Punkte (Erwartung)</td>
        </tr>
+       <tr>
+         <td><p id="pff1"></p></td>
+         <td class="innumber"><input type="number" name="pff1n" min="0" max=15></td>
+       </tr>
+       <tr>
+        <td><p id="pff2"></p></td>
+        <td class="innumber"><input type="number" name="pff2n" min="0" max=15></td>
+
+      </tr>
+      <tr>
+        <td><p id="pff3"></p></td>
+        <td class="innumber"><input type="number" name="pff3n" min="0" max=15></td>
+
+      </tr>
+      <tr>
+        <td><p id="pff4"></p></td>
+        <td class="innumber"><input type="number" name="pff4n" min="0" max=15></td>
+
+      </tr>
        <tr>
          <td></td>
        </tr>
@@ -159,8 +187,10 @@
          <td>1. Note zum Streichen</td>
          <td>2. Note zum Streichen</td>
        </tr>
-       <tr>
        
+       <tr>
+        <td><p id="streich1"></p></td>
+        <td><p id="streich2"></p></td>
        </tr>
      </table>
     </div>
@@ -171,27 +201,107 @@
          <td>Punkte</td>
        </tr>
        <tr>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>Summe A</td>
-       </tr>
-       <tr>
-         <td>Summe B</td>
-       </tr>
-       <tr>
-         <td>Punkte</td>
-       </tr>
-       <tr>
-         <td>Abipunkte</td>
+         <td>Abiturnote</td>
+         <td><p id="abinote"></p></td>
        </tr>
        <tr>
          <td>Gesamtpunkte</td>
+         <td><p id="gesamtpunkte"></p></td>
        </tr>
      </table>
   </div>
     </div>
+    <script>
+      var alle = [];
+        for(f=5; f>=11; f++){
+          for(i=0; i>=4; i++){
+            var tmpvar = document.getElementsByName(String("fach" + f + "hj" + i))[0].value;
+            alle.append(tmpvar);
+          }
+        }
+        
+        alert(alle);
+
+      function ausrechnen() {
+        var p1hj1 = parseInt(document.getElementsByName("fach1hj1")[0].value);
+        var p1hj2 = parseInt(document.getElementsByName("fach1hj2")[0].value);
+        var p1hj3 = parseInt(document.getElementsByName("fach1hj3")[0].value);
+        var p1hj4 = parseInt(document.getElementsByName("fach1hj4")[0].value);
+        var p1 = p1hj1 + p1hj2 + p1hj3 + p1hj4;
+        var p2hj1 = parseInt(document.getElementsByName("fach2hj1")[0].value);
+        var p2hj2 = parseInt(document.getElementsByName("fach2hj2")[0].value);
+        var p2hj3 = parseInt(document.getElementsByName("fach2hj3")[0].value);
+        var p2hj4 = parseInt(document.getElementsByName("fach2hj4")[0].value);
+        var p2 = p2hj1 + p2hj2 + p2hj3 + p2hj4;
+        var p3hj1 = parseInt(document.getElementsByName("fach3hj1")[0].value);
+        var p3hj2 = parseInt(document.getElementsByName("fach3hj2")[0].value);
+        var p3hj3 = parseInt(document.getElementsByName("fach3hj3")[0].value);
+        var p3hj4 = parseInt(document.getElementsByName("fach3hj4")[0].value);
+        var p3 = p3hj1 + p3hj2 + p3hj3 + p3hj4;
+        var p4hj1 = parseInt(document.getElementsByName("fach4hj1")[0].value);
+        var p4hj2 = parseInt(document.getElementsByName("fach4hj2")[0].value);
+        var p4hj3 = parseInt(document.getElementsByName("fach4hj3")[0].value);
+        var p4hj4 = parseInt(document.getElementsByName("fach4hj4")[0].value);
+        var p4 = p4hj1 + p4hj2 + p4hj3 + p4hj4;
+        var summea = p1 + p2 + p3
+
+        var a1hj1 = parseInt(document.getElementsByName("fach5hj1")[0].value);
+        var a1hj2 = parseInt(document.getElementsByName("fach5hj2")[0].value);
+        var a1hj3 = parseInt(document.getElementsByName("fach5hj3")[0].value);
+        var a1hj4 = parseInt(document.getElementsByName("fach5hj4")[0].value);
+        var a1 = a1hj1 + a1hj2 + a1hj3 + a1hj4;
+        var a2hj1 = parseInt(document.getElementsByName("fach6hj1")[0].value);
+        var a2hj2 = parseInt(document.getElementsByName("fach6hj2")[0].value);
+        var a2hj3 = parseInt(document.getElementsByName("fach6hj3")[0].value);
+        var a2hj4 = parseInt(document.getElementsByName("fach6hj4")[0].value);
+        var a2 = a2hj1 + a2hj2 + a2hj3 + a2hj4;
+        var a3hj1 = parseInt(document.getElementsByName("fach7hj1")[0].value);
+        var a3hj2 = parseInt(document.getElementsByName("fach7hj2")[0].value);
+        var a3hj3 = parseInt(document.getElementsByName("fach7hj3")[0].value);
+        var a3hj4 = parseInt(document.getElementsByName("fach7hj4")[0].value);
+        var a3 = a3hj1 + a3hj2 + a3hj3 + a3hj4;
+        var a4hj1 = parseInt(document.getElementsByName("fach8hj1")[0].value);
+        var a4hj2 = parseInt(document.getElementsByName("fach8hj2")[0].value);
+        var a4hj3 = parseInt(document.getElementsByName("fach8hj3")[0].value);
+        var a4hj4 = parseInt(document.getElementsByName("fach8hj4")[0].value);
+        var a4 = a4hj1 + a4hj2 + a4hj3 + a4hj4;
+        var a5hj1 = parseInt(document.getElementsByName("fach9hj1")[0].value);
+        var a5hj2 = parseInt(document.getElementsByName("fach9hj2")[0].value);
+        var a5hj3 = parseInt(document.getElementsByName("fach9hj3")[0].value);
+        var a5hj4 = parseInt(document.getElementsByName("fach9hj4")[0].value);
+        var a5 = a5hj1 + a5hj2 + a5hj3 + a5hj4;
+        var a6hj1 = parseInt(document.getElementsByName("fach10hj1")[0].value);
+        var a6hj2 = parseInt(document.getElementsByName("fach10hj2")[0].value);
+        var a6hj3 = parseInt(document.getElementsByName("fach10hj3")[0].value);
+        var a6hj4 = parseInt(document.getElementsByName("fach10hj4")[0].value);
+        var a6 = a6hj1 + a6hj2 + a6hj3 + a6hj4;
+        var a7hj1 = parseInt(document.getElementsByName("fach11hj1")[0].value);
+        var a7hj2 = parseInt(document.getElementsByName("fach11hj2")[0].value);
+        var a7hj3 = parseInt(document.getElementsByName("fach11hj3")[0].value);
+        var a7hj4 = parseInt(document.getElementsByName("fach11hj4")[0].value);
+        var a7 = a7hj1 + a7hj2 + a7hj3 + a7hj4;
+
+        var summeb = p4 + a1 + a2+ a3 + a4 + a5 + a6 + a7
+        var punkte = ((summea*2 + summeb)/54)*40
+
+        var pf1 = parseInt(document.getElementsByName("pff1n")[0].value);
+        var pf2 = parseInt(document.getElementsByName("pff2n")[0].value);
+        var pf3 = parseInt(document.getElementsByName("pff3n")[0].value);
+        var pf4 = parseInt(document.getElementsByName("pff4n")[0].value);
+        var abipunkte = pf1 + pf2 + pf3 + pf4
+
+        var gesamtpunkte = punkte + abipunkte*5
+
+      return alert(gesamtpunkte);
+      }
+
+    </script>
+    <script>
+      function setInput(from, target) {
+        var pff1a = document.getElementById(String(from)).value;
+        document.getElementById(String(target)).innerHTML = pff1a
+      }
+    </script>
 
      <!--<table border= "r">
        <tr>

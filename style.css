@@ -127,11 +127,7 @@ table, th, td {
     }
 
     #mid {
-        width: 100%;
-        margin: 3px;
-        margin-top: 30px;
-        padding-left: 8px;
-        padding-right: 8px;
+        width: 45px;
     }
 
     input[type=number]{
