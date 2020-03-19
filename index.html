@@ -149,7 +149,7 @@
          <td class="innumber"><input type="number" name="fach11hj4" min="0" max=15></td>
        </tr>
      </table>
-     <button class="btn btn-primary" onClick="ausrechnen()">Hallo</button>
+     <button class="btn btn-primary" onClick="ausrechnen()">Ausrechnen</button>
     </div>
     <div class="container calculator">
      <div class="row" id="tables-2">
@@ -213,18 +213,11 @@
      </table>
   </div>
     </div>
+    <h3 id="testfeld"></h3>
     <script>
-      var alle = [];
-        for(f=5; f>=11; f++){
-          for(i=0; i>=4; i++){
-            var tmpvar = document.getElementsByName(String("fach" + f + "hj" + i))[0].value;
-            alle.append(tmpvar);
-          }
-        }
-        
-        alert(alle);
 
       function ausrechnen() {
+
         var p1hj1 = parseInt(document.getElementsByName("fach1hj1")[0].value);
         var p1hj2 = parseInt(document.getElementsByName("fach1hj2")[0].value);
         var p1hj3 = parseInt(document.getElementsByName("fach1hj3")[0].value);
@@ -293,8 +286,32 @@
         var abipunkte = pf1 + pf2 + pf3 + pf4
 
         var gesamtpunkte = punkte + abipunkte*5
+        gesamtpunkte = Math.floor(gesamtpunkte);
+        document.getElementById("gesamtpunkte").innerHTML = gesamtpunkte;
 
-      return alert(gesamtpunkte);
+        var alle = [];
+        var f;
+        var tmpstr;
+        var i;
+        for(f = 5; f < 12; f++){
+          for(i = 1; i < 5; i++){
+            tmpstr = "fach" + f + "hj" + i;
+            alle.push(document.getElementsByName(tmpstr)[0].value);
+          }
+        }
+        document.getElementById("testfeld").innerHTML = alle;
+
+        var abiturnote;
+        switch (gesamtpunkte) {
+          case 300:
+            abiturnote = 4.0;
+          case 301:
+            abiturnote = 3.9;
+          case 319:
+            abiturnote = 3.8;
+          default:
+            return;
+        }
       }
 
     </script>
