@@ -1,5 +1,9 @@
-<html>
+<!--
+Danke an Henning für die Idee!
 
+Ein Projekt von Florian W., Till F. und Undine R. im Rahmen des Informatiktutoriums 12/6
+-->
+<html>
 <head>
     <title>Gradcalc - Abinotenberechnung für jedermann!</title>
     <meta charset="utf-8">
@@ -16,7 +20,6 @@
         <a class="navbar-brand" href="#"><img src="./gradcalc-logo.png" style="width: 50px;"></a>
         <ul class="nav nav-pills headlist" role="tablist">
             <li class="active"><a href="./index.html">Rechner</a></li>
-            <li><a href="./informationen.htm">Informationen</a></li>
             <li><a href="./impressum.htm">Impressum</a></li>
             <li><a href="./datenschutz.htm">Datenschutzerklärung</a></li>
         </ul>
@@ -151,13 +154,13 @@
      </table>
      <button class="btn btn-primary" onClick="ausrechnen()">Ausrechnen</button>
     </div>
-    <div class="container calculator">
-     <div class="row" id="tables-2">
+    <div class="container calculator" id="tables-2">
+     <div class="row">
         <div class="col-md-3">
      <table border= "r">
        <tr>
-         <td>Abiturprüfungsfächer</td>
-         <td>Punkte (Erwartung)</td>
+         <th>Abiturprüfungsfächer</td>
+         <th>Punkte (Erwartung)</td>
        </tr>
        <tr>
          <td><p id="pff1"></p></td>
@@ -178,16 +181,13 @@
         <td class="innumber"><input type="number" name="pff4n" min="0" max=15></td>
 
       </tr>
-       <tr>
-         <td></td>
-       </tr>
      </table>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
      <table border= "r">
-       <tr>
-         <td>1. Note zum Streichen</td>
-         <td>2. Note zum Streichen</td>
+       <t>
+         <th>1. Note zum Streichen</td>
+         <th>2. Note zum Streichen</td>
        </tr>
        
        <tr>
@@ -196,11 +196,11 @@
        </tr>
      </table>
     </div>
-  <div class="col-md-4">
+  <div class="col-sm-3" id="tabelle3">
      <table border= "r">
        <tr>
-         <td></td>
-         <td>Punkte</td>
+         <th></td>
+         <th>Punkte</td>
        </tr>
        <tr>
          <td>Abiturnote</td>
@@ -303,6 +303,17 @@
           for(i = 1; i < 5; i++){
             tmpstr = "fach" + f + "hj" + i;
             alle.push(document.getElementsByName(tmpstr)[0].value);
+          }
+        }
+        //Skript zum Zusammenfassen wirklich aller Halbjahresnoten in einem Array
+        var wirklichalle = [];
+        var fa;
+        var tmpstra;
+        var ia;
+        for(fa = 1; fa < 12; fa++){
+          for(ia= 1; ia < 5; ia++){
+            tmpstra = "fach" + fa + "hj" + ia;
+            wirklichalle.push(document.getElementsByName(tmpstr)[0].value);
           }
         }
         //document.getElementById("testfeld").innerHTML = alle;
@@ -411,7 +422,7 @@
           abiturnote = 1.0;
           }
         if (abiturnote === undefined) {
-          abiturnote = "Irgendwas ist falsch gelaufen.";
+          abiturnote = "Du hast anscheinend noch nicht alle Noten eingetragen";
         }
         document.getElementById("abinote").innerHTML = abiturnote;
       }

@@ -7,6 +7,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: OpenSans, sans-serif;
+    margin-bottom: 50px;
 }
 
 .navbar {
@@ -49,6 +50,11 @@ body {
 
 #tables-2 {
     margin-top: 50px;
+    width: 100%;
+}
+
+#tables-2 * {
+    margin: auto;
 }
 
 .innumber {
@@ -87,6 +93,26 @@ table, th, td {
   th {
       background: #D9ECFF;
       padding: 10px;
+  }
+
+  table {
+      margin-left: 30px;
+      margin-right: 30px;
+  }
+
+  #tabelle3 {
+      margin-right: -50px;
+      padding-right: -50px;
+  }
+
+  button {
+      margin-top: 30px;
+      animation: colorchange 60s;
+  }
+
+  .formatted {
+      margin-left: 80px;
+      margin-right: 80px;
   }
 
 /*Media Queries für responsives Design*/
@@ -137,4 +163,28 @@ table, th, td {
     th {
         padding: 5px;
     }
+}
+
+@media only screen and (max-width: 1200px) {
+    #tables-2 * {
+        font-size: 12px;
+    }
+}
+
+@keyframes colorchange
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
 }
